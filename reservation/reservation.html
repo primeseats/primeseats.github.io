@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeSeats | Make a Reservation</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Flatpickr for date picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="../dist/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Prime<span>Seats</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../restaurants/restaurants.html">Restaurants</a></li>
+                    <li><a href="../index.html#about-us">About</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="container page-intro">
+        <h2 class="section-title">Make a Reservation</h2>
+        <p>
+            Reserve your table at one of London's most exclusive restaurants. Fill in the details below to secure your spot.
+        </p>
+    </section>
+
+    <!-- Reservation Form -->
+    <section class="container">
+        <div class="contact-container">
+            <!-- Reservation Form -->
+            <div class="contact-form-container">
+                <form>
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+
+                    <!-- Restaurant Name -->
+                    <div class="form-group">
+                        <label for="restaurant">Restaurant Name</label>
+                        <select id="restaurant" class="form-control" required>
+                            <option value="" disabled selected hidden>Select a restaurant</option>
+                            <option value="House of Ming">House of Ming</option>
+                            <option value="Frog by Adam Handling">Frog by Adam Handling</option>
+                            <option value="Sumosan Twiga">Sumosan Twiga</option>
+                            <option value="Plates">Plates</option>
+                            <option value="Scully St James's">Scully St James's</option>
+                            <option value="La Trompette">La Trompette</option>
+                        </select>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="text" id="date" class="form-control" placeholder="Select date" required>
+                    </div>
+
+                    <!-- Number of Guests -->
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" class="form-control" placeholder="Number of Guests" required>
+                            <option value="" disabled selected hidden>Select number of guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10">11</option>
+                            <option value="10">12</option>
+                            <option value="10">13</option>
+                            <option value="10">14</option>
+                            <option value="10">15</option>
+                        </select>
+                    </div>
+
+                    <!-- Food Precautionary -->
+                    <div class="form-group">
+                        <label for="precautionary">Food Precautionary (e.g., allergies, dietary restrictions) - Optional</label>
+                        <textarea id="precautionary" rows="4" class="form-control"></textarea>
+                    </div>
+
+                    <!-- Credit Card Information -->
+                    <div class="form-group">
+                        <label for="card-number">Credit Card Number</label>
+                        <input type="text" id="card-number" class="form-control" placeholder="****-****-****-****" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-expiry">Expiration Date</label>
+                        <input type="text" id="card-expiry" class="form-control" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" class="form-control" placeholder="***" required>
+                    </div>
+
+                    <!-- Process Payment Button -->
+                    <button type="submit" class="btn btn-filled form-submit-btn">
+                        Process Booking
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PrimeSeats</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#about-us">About</a></li>
+                        <li><a href="../contact/contact.html">Contact</a></li>
+                        <li><a href="#">Privacy and Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PrimeSeats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for Date Picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Date Picker
+            flatpickr("#date", {
+                minDate: "today",
+                dateFormat: "Y-m-d",
+                disableMobile: true
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeSeats | Restaurants</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Flatpickr for date picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="../dist/styles.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Prime<span>Seats</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="../index.html#about-us">About</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="container page-intro">
+        <h2 class="section-title">Restaurants</h2>
+        <p>
+            Discover the best restaurants in London and book a table for your next dining experience.
+        </p>
+    </section>
+
+    <!-- Search Module -->
+    <section class="container">
+        <div class="search-module">
+            <form class="search-form" id="search-form">
+                <!-- 1. Restaurant Search -->
+                <div class="search-group restaurant-dropdown">
+                    <i class="fas fa-utensils"></i>
+                    <input type="text" class="search-input" id="restaurant-search" placeholder="Select Restaurant">
+                    <button type="button" class="dropdown-toggle" id="dropdown-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="restaurant-results" id="restaurant-results"></div>
+                </div>
+
+                <!-- 2. Date Picker -->
+                <div class="search-group">
+                    <i class="far fa-calendar-alt"></i>
+                    <input type="text" class="search-input" id="date-picker" placeholder="Date">
+                </div>
+
+                <!-- 3. Guests Select Box -->
+                <div class="search-group">
+                    <i class="fas fa-user-friends"></i>
+                    <select class="search-input" id="guests-select">
+                        <option value="" disabled selected hidden>Number of Guests</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-submit">
+                    <i class="fas fa-search"></i> Find Table
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Restaurants List -->
+    <section class="container">
+        <div class="restaurant-grid">
+            <!-- Restaurant 1 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('../img/house_of_ming.jpg')"></div>
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name"><a href="house_of_ming.html">House of Ming</a></h3>
+                    <p class="restaurant-location">Central London</p>
+                    <p class="restaurant-cuisine">Chinese, Seafood</p>
+                    <div class="restaurant-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="restaurant-price">££££</p>
+                </div>
+            </div>
+            
+            <!-- Restaurant 2 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('../img/frog_adam_handling.jpg')"></div>
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name"><a href="#">Frog by Adam Handling</a></h3>
+                    <p class="restaurant-location">Covent Garden</p>
+                    <p class="restaurant-cuisine">European, British</p>
+                    <div class="restaurant-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="restaurant-price">££££</p>
+                </div>
+            </div>
+            
+            <!-- Restaurant 3 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('../img/sumosan_twiga.jpg')"></div>
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name"><a href="#">Sumosan Twiga</a></h3>
+                    <p class="restaurant-location">Belgravia</p>
+                    <p class="restaurant-cuisine">Italian, Japanese</p>
+                    <div class="restaurant-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="restaurant-price">£££</p>
+                </div>
+            </div>
+
+            <!-- Restaurant 4 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('../img/plates.jpg')"></div>
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name"><a href="#">Plates</a></h3>
+                    <p class="restaurant-location">Shoreditch</p>
+                    <p class="restaurant-cuisine">British, Contemporary</p>
+                    <div class="restaurant-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="restaurant-price">££££</p>
+                </div>
+            </div>
+
+            <!-- Restaurant 5 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('../img/scully_st_james.jpg')"></div>
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name"><a href="#">Scully St James's</a></h3>
+                    <p class="restaurant-location">St James's</p>
+                    <p class="restaurant-cuisine">International, Vegetarian</p>
+                    <div class="restaurant-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="restaurant-price">££££</p>
+                </div>
+            </div>
+
+            <!-- Restaurant 6 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('../img/la_trompette.jpg')"></div>
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name"><a href="#">La Trompette</a></h3>
+                    <p class="restaurant-location">Chiswick</p>
+                    <p class="restaurant-cuisine">French, European</p>
+                    <div class="restaurant-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="restaurant-price">££££</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="container" style="text-align: center; margin-bottom: 60px;">
+        <a href="#" class="btn btn-outline" style="margin-right: 10px;">Previous</a>
+        <a href="#" class="btn btn-filled" style="margin-right: 10px;">1</a>
+        <a href="#" class="btn btn-outline" style="margin-right: 10px;">2</a>
+        <a href="#" class="btn btn-outline" style="margin-right: 10px;">3</a>
+        <a href="#" class="btn btn-outline">Next</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PrimeSeats</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#about-us">About</a></li>
+                        <li><a href="../contact/contact.html">Contact</a></li>
+                        <li><a href="#">Privacy and Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PrimeSeats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for Search Box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Date Picker
+            flatpickr("#date-picker", {
+                minDate: "today",
+                dateFormat: "Y-m-d",
+                disableMobile: true
+            });
+            
+            // Simulating restaurant search functionality
+            const restaurantSearch = document.getElementById('restaurant-search');
+            const restaurantResults = document.getElementById('restaurant-results');
+            const dropdownToggle = document.getElementById('dropdown-toggle');
+            
+            // Define selected restaurant data
+            let selectedRestaurantId = null;
+            
+            // Restaurants list, manually added for demo purposes
+            const restaurants = [
+                { id: 1, name: "House of Ming" },
+                { id: 2, name: "Frog by Adam Handling" },
+                { id: 3, name: "Sumosan Twiga" },
+                { id: 1, name: "Plates" },
+                { id: 2, name: "Scully St James's" },
+                { id: 3, name: "La Trompette" }
+            ];
+            
+            function populateDropdown() {
+                restaurantResults.innerHTML = '';
+                
+                restaurants.forEach(restaurant => {
+                    const item = document.createElement('div');
+                    item.className = 'restaurant-item';
+                    item.innerHTML = `
+                        <div class="restaurant-name text-sm">${restaurant.name}</div>
+                    `;
+                    
+                    item.addEventListener('click', () => {
+                        selectRestaurant(restaurant);
+                        restaurantResults.classList.remove('active');
+                    });
+                    
+                    restaurantResults.appendChild(item);
+                });
+                
+                restaurantResults.classList.add('active');
+            }
+            
+            // Toggle dropdown on button click
+            dropdownToggle.addEventListener('click', function() {
+                populateDropdown();
+                restaurantResults.classList.toggle('active');
+            });
+            
+            // Search restaurants by name
+            restaurantSearch.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                
+                if (query.length < 1) {
+                    restaurantResults.classList.remove('active');
+                    return;
+                }
+                
+                const filtered = restaurants.filter(restaurant => 
+                    restaurant.name.toLowerCase().includes(query)
+                );
+                
+                if (filtered.length > 0) {
+                    restaurantResults.innerHTML = '';
+                    
+                    filtered.forEach(restaurant => {
+                        const item = document.createElement('div');
+                        item.className = 'restaurant-item';
+                        item.innerHTML = `
+                            <div class="restaurant-name text-sm">${restaurant.name}</div>
+                        `;
+                        
+                        item.addEventListener('click', () => {
+                            selectRestaurant(restaurant);
+                            restaurantResults.classList.remove('active');
+                        });
+                        
+                        restaurantResults.appendChild(item);
+                    });
+                    
+                    restaurantResults.classList.add('active');
+                } else {
+                    restaurantResults.classList.remove('active');
+                }
+            });
+            
+            // Select a restaurant
+            function selectRestaurant(restaurant) {
+                restaurantSearch.value = restaurant.name;
+                restaurantSearch.dataset.restaurantId = restaurant.id;
+                selectedRestaurantId = restaurant.id;
+            }
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.restaurant-dropdown')) {
+                    restaurantResults.classList.remove('active');
+                }
+            });
+            
+            // Show dropdown on focus
+            restaurantSearch.addEventListener('focus', function() {
+                if (this.value.length < 2) {
+                    populateDropdown();
+                } else {
+                    this.dispatchEvent(new Event('input'));
+                }
+            });
+            
+            // Form submission
+            document.getElementById('search-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const restaurantId = restaurantSearch.dataset.restaurantId;
+                const date = document.getElementById('date-picker').value;
+                const guests = document.getElementById('guests-select').value;
+                
+                // Validate selection
+                if (!restaurantId) {
+                    alert('Please select a restaurant from the dropdown');
+                    return;
+                }
+                
+                // Prepare data for submission
+                const searchData = {
+                    restaurantId,
+                    date,
+                    guests
+                };
+                
+                console.log('Search Data:', searchData);
+                alert('Search submitted with:\n' + JSON.stringify(searchData, null, 2));
+            });
+        });
+    </script>
+</body>
+</html>

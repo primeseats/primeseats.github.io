@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeSeats | Contact Us</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="../dist/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Prime<span>Seats</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../restaurants/restaurants.html">Restaurants</a></li>
+                    <li><a href="../index.html#about-us">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="container page-intro">
+        <h2 class="section-title">Contact Us</h2>
+        <p>
+            Have questions about our service or need assistance with a reservation? 
+            Our team is here to help you find the perfect dining experience.
+        </p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="container">
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h3>Send a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" class="form-control">
+                            <option value="" disabled selected hidden>Select a subject</option>
+                            <option value="reservation">Reservation Inquiry</option>
+                            <option value="support">Customer Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="6" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-filled form-submit-btn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4 class="faq-question">How do I make a reservation?</h4>
+                <p class="faq-answer">
+                    You can make a reservation by searching for your preferred restaurant on our website, selecting the date, time, and party size, and then confirming your details. Alternatively, you can contact our customer service team for assistance.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-question">Can I modify or cancel my reservation?</h4>
+                <p class="faq-answer">
+                    Yes, you can modify or cancel your reservation up to 24 hours before your scheduled dining time through your account dashboard. For last-minute changes, please contact the restaurant directly.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-question">Is there a fee for using PrimeSeats?</h4>
+                <p class="faq-answer">
+                    PrimeSeats is completely free for diners. We never charge fees for making reservations through our platform. Some restaurants may have their own cancellation policies or require deposits for certain bookings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PrimeSeats</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#about-us">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy and Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PrimeSeats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

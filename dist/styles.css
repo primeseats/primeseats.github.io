@@ -1,0 +1,695 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-elevated: #252525;
+    --text-primary: #f1f1f1;
+    --text-secondary: #b3b3b3;
+    --text-tertiary: #666666;
+    --accent: #bb9d6f;
+    --accent-dark: #9a815a;
+    --border: #333333;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-optical-sizing: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Home Page Styles */
+/* Header Styles */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.btn-filled {
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.btn-filled:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* Hero Section */
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+}
+
+/* Enhanced Search Styles */
+.search-module {
+    background-color: transparent;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.search-group {
+    position: relative;
+    flex: 1 1 200px;
+}
+
+.search-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    z-index: 2;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px 15px 40px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.search-submit {
+    flex: 0 0 auto;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.search-submit:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* Select Styling */
+select.search-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* Restaurant Dropdown */
+.restaurant-dropdown {
+    position: relative;
+}
+
+.restaurant-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.restaurant-results.active {
+    visibility: visible;
+}
+
+/* Styles for individual restaurant items in the dropdown list */
+.restaurant-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: left;
+}
+
+.restaurant-item:hover {
+    background-color: var(--bg-elevated);
+}
+
+.restaurant-item:not(:last-of-type) {
+    border-bottom: 1px solid var(--border);
+}
+
+.restaurant-name {
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+/* Flatpickr Customization */
+.flatpickr-calendar {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flatpickr-day {
+    color: var(--text-primary);
+}
+
+.flatpickr-day.selected, 
+.flatpickr-day.startRange, 
+.flatpickr-day.endRange, 
+.flatpickr-day.selected.inRange, 
+.flatpickr-day.startRange.inRange, 
+.flatpickr-day.endRange.inRange, 
+.flatpickr-day.selected:focus, 
+.flatpickr-day.startRange:focus, 
+.flatpickr-day.endRange:focus, 
+.flatpickr-day.selected:hover, 
+.flatpickr-day.startRange:hover, 
+.flatpickr-day.endRange:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.flatpickr-day.inRange, 
+.flatpickr-day.prevMonthDay.inRange, 
+.flatpickr-day.nextMonthDay.inRange, 
+.flatpickr-day.today.inRange, 
+.flatpickr-day.prevMonthDay.today.inRange, 
+.flatpickr-day.nextMonthDay.today.inRange {
+    background: var(--bg-elevated);
+    border-color: var(--bg-elevated);
+}
+
+.flatpickr-months .flatpickr-month, 
+.flatpickr-weekdays, 
+.flatpickr-weekday {
+    background: var(--accent-dark);
+    color: var(--text-primary);
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months, 
+.flatpickr-current-month input.cur-year {
+    color: var(--text-primary);
+}
+
+.flatpickr-day.flatpickr-disabled, 
+.flatpickr-day.flatpickr-disabled:hover, 
+.flatpickr-day.prevMonthDay, 
+.flatpickr-day.nextMonthDay, 
+.flatpickr-day.notAllowed {
+    color: var(--text-tertiary);
+}
+
+/* Toggle dropdown button */
+.dropdown-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-toggle:hover {
+    color: var(--accent);
+}
+
+/* About Us Section */
+.about {
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.about .about-image {
+    flex: 1 1 40%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+.about .about-text {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about .about-text p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* How It Works Section */
+.features {
+    padding: 60px 0;
+    background-color: var(--bg-secondary);
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 36px;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.feature p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+/* Featured Restaurants */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.restaurant-card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.restaurant-info {
+    padding: 20px;
+}
+
+.restaurant-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.restaurant-location {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.restaurant-cuisine {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.restaurant-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.star {
+    color: var(--accent);
+    margin-right: 2px;
+}
+
+.restaurant-price {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Restaurant Details Page */
+.restaurant-details {
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.restaurant-contact {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-secondary);
+    padding: 60px 0 20px;
+    border-top: 1px solid var(--border);
+    text-align: left;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    justify-items: left;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: var(--accent);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    nav ul li {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about .about-image {
+        min-height: 250px;
+    }
+}
+
+/* Non-Home Page Intro Styles */
+.page-intro {
+    text-align: center; 
+    margin: 60px auto 40px;
+}
+
+.page-intro p {
+    color: var(--text-secondary); 
+    max-width: 700px; 
+    margin: 0 auto;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    max-width: 1000px; 
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.contact-form-container {
+    flex: 1 1 500px; 
+    background-color: var(--bg-secondary); 
+    padding: 30px; 
+    border-radius: 8px;
+}
+
+.contact-form-container h3 {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 8px; 
+    color: var(--text-secondary);
+}
+
+.form-control {
+    width: 100%; 
+    padding: 12px; 
+    background-color: var(--bg-primary); 
+    border: 1px solid var(--border); 
+    border-radius: 4px; 
+    color: var(--text-primary); 
+    font-family: inherit; 
+    font-size: 16px;
+}
+
+/* Special styling for select dropdown */
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+select.form-control:focus {
+    border-color: var(--accent);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.form-submit-btn {
+    width: 100%; 
+    padding: 12px; 
+    font-size: 16px;
+}
+
+/* FAQ Section Styles */
+.faq-container {
+    max-width: 800px; 
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.faq-item {
+    background-color: var(--bg-secondary); 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    font-size: 18px; 
+    margin-bottom: 10px; 
+    color: var(--accent); 
+    font-weight: normal;
+}
+
+.faq-answer {
+    color: var(--text-secondary);
+}
