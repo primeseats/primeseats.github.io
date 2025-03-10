@@ -231,8 +231,8 @@ select.search-input {
     border: 1px solid var(--border);
     border-radius: 4px;
     margin-top: 5px;
-    max-height: 200px;
-    overflow-y: auto;
+    max-height: 150px;
+    overflow-y: auto; /* Add scroll if there are too many items */
     z-index: 10;
     visibility: hidden;
 }
@@ -243,7 +243,7 @@ select.search-input {
 
 /* Styles for individual restaurant items in the dropdown list */
 .restaurant-item {
-    padding: 10px 15px;
+    padding: 6px 10px;
     cursor: pointer;
     transition: background-color 0.2s ease;
     text-align: left;
@@ -253,13 +253,15 @@ select.search-input {
     background-color: var(--bg-elevated);
 }
 
-.restaurant-item:not(:last-of-type) {
-    border-bottom: 1px solid var(--border);
-}
-
 .restaurant-name {
     font-weight: 500;
-    margin-bottom: 3px;
+    margin: 0;
+}
+
+.restaurant-name-small {
+    font-weight: 100;
+    margin: 0;
+    font-size: 16px;
 }
 
 /* Flatpickr Customization */
@@ -427,6 +429,15 @@ select.search-input {
     width: 60px;
     height: 2px;
     background-color: var(--accent);
+}
+
+.section-sub-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 /* Featured Restaurants */

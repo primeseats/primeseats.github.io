@@ -98,11 +98,11 @@
         <div class="restaurant-grid">
             <!-- Restaurant 1 -->
             <div class="restaurant-card">
-                <div class="restaurant-image" style="background-image: url('../img/house_of_ming.jpg')"></div>
+                <div class="restaurant-image" style="background-image: url('../img/core_by_clare_smyth.jpg')"></div>
                 <div class="restaurant-info">
-                    <h3 class="restaurant-name"><a href="house_of_ming.html">House of Ming</a></h3>
-                    <p class="restaurant-location">Central London</p>
-                    <p class="restaurant-cuisine">Chinese, Seafood</p>
+                    <h3 class="restaurant-name"><a href="core_by_clare_smyth.html">Core by Clare Smyth</a></h3>
+                    <p class="restaurant-location">Notting Hill</p>
+                    <p class="restaurant-cuisine">French, Bar</p>
                     <div class="restaurant-rating">
                         <i class="fas fa-star star"></i>
                         <i class="fas fa-star star"></i>
@@ -254,7 +254,7 @@
             
             // Restaurants list, manually added for demo purposes
             const restaurants = [
-                { id: 1, name: "House of Ming" },
+                { id: 1, name: "Core by Clare Smyth" },
                 { id: 2, name: "Frog by Adam Handling" },
                 { id: 3, name: "Sumosan Twiga" },
                 { id: 1, name: "Plates" },
@@ -269,7 +269,7 @@
                     const item = document.createElement('div');
                     item.className = 'restaurant-item';
                     item.innerHTML = `
-                        <div class="restaurant-name text-sm">${restaurant.name}</div>
+                        <div class="restaurant-name-small text-sm">${restaurant.name}</div>
                     `;
                     
                     item.addEventListener('click', () => {
@@ -309,7 +309,7 @@
                         const item = document.createElement('div');
                         item.className = 'restaurant-item';
                         item.innerHTML = `
-                            <div class="restaurant-name text-sm">${restaurant.name}</div>
+                            <div class="restaurant-name-small text-sm">${restaurant.name}</div>
                         `;
                         
                         item.addEventListener('click', () => {
