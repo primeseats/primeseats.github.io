@@ -610,6 +610,14 @@ footer {
     margin: 0 auto;
 }
 
+.pagination {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-bottom: 60px;
+    text-align: center;
+}
+
 /* Contact Page Styles */
 .contact-container {
     display: flex; 
